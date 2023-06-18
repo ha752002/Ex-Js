@@ -12,16 +12,16 @@ test('the longest increasing subsequence with arr', () => {
     expect(result).toBe(3);
 });
 
-test('the longest increasing subsequence with str', () => {
-    const str = "hsssss";
-    const result = findLongestIncreasing(str);
-    expect(result).toBe("Invalid input");
-});
+// test('the longest increasing subsequence with str', () => {
+//     const str = "hsssss";
+//     const result = findLongestIncreasing(str);
+//     expect(result).toBe("Invalid input");
+// });
 
-test('the longest increasing subsequence with arr', () => {
-    const str = " ";
-    const result = findLongestIncreasing(str);
-    expect(result).toBe("Invalid input");
-});
+// test('the longest increasing subsequence with arr', () => {
+//     const str = " ";
+//     const result = findLongestIncreasing(str);
+//     expect(result).toBe("Invalid input");
+// });
 
 

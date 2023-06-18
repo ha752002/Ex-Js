@@ -5,24 +5,21 @@
  * @returns  the longest increasing subsequence of the numbers. 
  */
 function findLongestIncreasing(arr) {
-    const length = arr.length;
-    const longestLengths = new Array(length).fill(1);
-
-    for (let i = 1; i < length; i++) {
-        for (let j = 0; j < i; j++) {
-            if (arr[i] > arr[j] && longestLengths[i] < longestLengths[j] + 1) {
-                longestLengths[i] = longestLengths[j] + 1;
+    maxLength = 0;
+    for (let i = 0; i < arr.length; i++) {
+        let count = 1;
+        let maxNumber = arr[i];
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[j] > maxNumber) {
+                count++;
+                maxNumber = arr[j];
             }
+
+        }
+        if (count >= maxLength) {
+            maxLength = count;
         }
     }
-
-    let maxLength = 0;
-    for (let i = 0; i < length; i++) {
-        if (longestLengths[i] > maxLength) {
-            maxLength = longestLengths[i];
-        }
-    }
-
     return maxLength;
 }
 
