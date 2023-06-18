@@ -5,17 +5,11 @@
  * @returns sum of a and b
  */
 function sum(a, b) {
-  if (!Array.isArray(arr) || arr.length === 0) {
+  if (Number.isNaN(a) || Number.isNaN(b)) {
     return "Invalid input";
+  } else {
+    return a + b;
   }
-
-  const numbers = arr.filter((num) => typeof num === 'number');
-
-  if (numbers.length === 0) {
-    return "Invalid input";
-  }
-
-  return a + b;
 }
 
 module.exports = sum;
