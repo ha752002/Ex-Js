@@ -1,15 +1,22 @@
-
 /**
  * Write a program that takes a list of numbers as input and displays the largest number in the list.
- * @param {arr} array 
+ * @param {numbers} numbers 
  * @returns displays the largest number in the list
  */
-function maxNumber(arr) {
-    if ((Array.isArray(arr)) && (arr.length > 0)) {
-        return Math.max(...arr);
+function maxNumber(numbers) {
+    if (numbers.length === 0) {
+        return "Invalid Input";
     } else {
-        return "Invalid input";
+        let max = numbers[0];
+        for (let i = 1; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+
+            }
+        }
+        return max;
     }
+
 }
 
 module.exports = maxNumber;
