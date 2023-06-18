@@ -1,7 +1,7 @@
 const lengthStr = require("./1-2.js");
 
-test(" Length of String", () => {
-    expect(lengthStr("I am Ha")).toBe(7);
+test(" Check typeof no string", () => {
+    expect(lengthStr([1, 2, 3])).toBe("Invalid input");
 });
 
 test(" Length of String", () => {

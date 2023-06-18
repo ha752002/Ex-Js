@@ -6,7 +6,13 @@
  */
 
 function lengthStr(str) {
-    return str.length;
+    if (typeof str === 'string') {
+        return str.length;
+    } else {
+        return "Invalid input";
+    }
+
+
 }
 
 module.exports = lengthStr;
