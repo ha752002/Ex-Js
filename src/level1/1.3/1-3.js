@@ -4,8 +4,10 @@
  * @returns result Area of ​​the rectangle
  */
 function areaSquare(a) {
-    if (a > 0) {
+    if (a > 0 && typeof a === "number") {
         return a * a;
+    } else {
+        return "Invalid input";
     }
 }
 
