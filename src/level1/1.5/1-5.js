@@ -4,19 +4,17 @@
  * @param {*} strings 
  * @returns displays the shortest string in the list
  */
+function smallString(arr) {
+    let shortestString = arr[0];
 
-function findShortestString(strings) {
-    if (strings.length === 0) {
-        return undefined;
-    }
-
-    let shortestString = strings[0];
-    for (let i = 1; i < strings.length; i++) {
-        if (strings[i].length < shortestString.length) {
-            shortestString = strings[i];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i].length < shortestString.length) {
+            shortestString = arr[i];
         }
     }
+
     return shortestString;
 }
 
-module.exports = findShortestString;
+
+module.exports = smallString;
